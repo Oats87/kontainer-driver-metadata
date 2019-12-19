@@ -13,6 +13,14 @@ const (
 
 func loadK8sVersionServiceOptions() map[string]v3.KubernetesServicesOptions {
 	return map[string]v3.KubernetesServicesOptions{
+		"v1.16.3-rancher1-1-cos": {
+			Etcd:           getETCDOptions(),
+			KubeAPI:        getKubeAPIOptions116(),
+			Kubelet:        getKubeletOptions116(),
+			KubeController: getCoreOSKubeControllerOptions(),
+			Kubeproxy:      getKubeProxyOptions(),
+			Scheduler:      getSchedulerOptions(),
+		},
 		"v1.17.0-rancher1-1": {
 			Etcd:           getETCDOptions(),
 			KubeAPI:        getKubeAPIOptions116(),
@@ -204,6 +212,24 @@ func getKubeControllerOptions() map[string]string {
 		"profiling":                   "false",
 		"terminated-pod-gc-threshold": "1000",
 		"v":                           "2",
+	}
+}
+
+// Added for CoreOS Compatibility https://github.com/rancher/rke/issues/1744#issuecomment-560020024
+func getCoreOSKubeControllerOptions() map[string]string {
+	return map[string]string{
+		"address":                     "0.0.0.0",
+		"allow-untagged-cloud":        "true",
+		"allocate-node-cidrs":         "true",
+		"configure-cloud-routes":      "false",
+		"enable-hostpath-provisioner": "false",
+		"leader-elect":                "true",
+		"node-monitor-grace-period":   "40s",
+		"pod-eviction-timeout":        "5m0s",
+		"profiling":                   "false",
+		"terminated-pod-gc-threshold": "1000",
+		"v":                           "2",
+		"flex-volume-plugin-dir": "/var/lib/kubelet/volumeplugins/",
 	}
 }
 
