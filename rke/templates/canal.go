@@ -770,10 +770,8 @@ data:
       "plugins": [
         {
           "type": "calico",
-{{- if index . "MTU"}}
-{{- if ne .MTU 0}}
+{{- if and index "MTU" ne .MTU 0}}
           "mtu": {{.MTU}},
-{{- end}}
 {{- end}}
           "log_level": "WARNING",
           "datastore_type": "kubernetes",
@@ -2465,10 +2463,8 @@ data:
       "plugins": [
         {
           "type": "calico",
-{{- if index . "MTU"}}
-{{- if ne .MTU 0}}
+{{- if and index "MTU" ne .MTU 0}}
           "mtu": {{.MTU}},
-{{- end}}
 {{- end}}
           "log_level": "WARNING",
           "datastore_type": "kubernetes",
