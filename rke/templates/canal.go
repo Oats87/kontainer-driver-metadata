@@ -2463,7 +2463,7 @@ data:
       "plugins": [
         {
           "type": "calico",
-{{- if and index "MTU" ne .MTU 0}}
+{{- if and (index "MTU") (ne .MTU 0)}}
           "mtu": {{.MTU}},
 {{- end}}
           "log_level": "WARNING",
