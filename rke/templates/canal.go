@@ -2463,9 +2463,9 @@ data:
       "plugins": [
         {
           "type": "calico",
-{{- if and (index "MTU") (ne .MTU 0)}}
+{{- if index "MTU"}}{{-if ne .MTU 0}}
           "mtu": {{.MTU}},
-{{- end}}
+{{- end}}{{- end}}
           "log_level": "WARNING",
           "datastore_type": "kubernetes",
           "nodename": "__KUBERNETES_NODE_NAME__",
