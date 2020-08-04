@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"sigs.k8s.io/yaml"
 	"strings"
+
+	"sigs.k8s.io/yaml"
 
 	"github.com/blang/semver"
 	"github.com/rancher/kontainer-driver-metadata/rke/templates"
@@ -31,12 +32,12 @@ func initData() {
 		K3S:                       map[string]interface{}{},
 	}
 
-	for version, images := range DriverData.K8sVersionRKESystemImages {
+	/*for version, images := range DriverData.K8sVersionRKESystemImages {
 		longName := "rancher/hyperkube:" + version
 		if !strings.HasPrefix(longName, images.Kubernetes) {
 			panic(fmt.Sprintf("For K8s version %s, the Kubernetes image tag should be a substring of %s, currently it is %s", version, version, images.Kubernetes))
 		}
-	}
+	} */
 
 	DriverData.RKEDefaultK8sVersions = loadRKEDefaultK8sVersions()
 	DriverData.RancherDefaultK8sVersions = loadRancherDefaultK8sVersions()
