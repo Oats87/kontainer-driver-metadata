@@ -5378,7 +5378,7 @@
    "metricsServer": "rancher/metrics-server:v0.3.6",
    "windowsPodInfraContainer": "rancher/kubelet-pause:v0.1.4"
   },
-  "v1.19.0-rancher1-1": {
+  "v1.19.0-rc.4-rancher1-1": {
    "etcd": "rancher/coreos-etcd:v3.4.3-rancher1",
    "alpine": "rancher/rke-tools:v0.1.62",
    "nginxProxy": "rancher/rke-tools:v0.1.62",
@@ -5391,7 +5391,7 @@
    "coredns": "rancher/coredns-coredns:1.6.9",
    "corednsAutoscaler": "rancher/cluster-proportional-autoscaler:1.7.1",
    "nodelocal": "rancher/k8s-dns-node-cache:1.15.7",
-   "kubernetes": "oats87/hyperkube:v1.19.0-rc.4-rancher1",
+   "kubernetes": "rancher/hyperkube:v1.19.0-rc.4-rancher1",
    "flannel": "rancher/coreos-flannel:v0.12.0",
    "flannelCni": "rancher/flannel-cni:v0.3.0-rancher6",
    "calicoNode": "rancher/calico-node:v3.13.4",
