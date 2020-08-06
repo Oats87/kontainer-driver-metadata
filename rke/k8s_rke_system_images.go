@@ -3215,7 +3215,7 @@ func loadK8sRKESystemImages() map[string]v3.RKESystemImages {
 			CalicoFlexVol:             m("quay.io/calico/pod2daemon-flexvol:v3.13.4"),
 			CanalNode:                 m("quay.io/calico/node:v3.13.4"),
 			CanalCNI:                  m("quay.io/calico/cni:v3.13.4"),
-			CanalFlannel:              m("quay.io/coreos/flannel:v0.12.0"),
+			CanalFlannel:              m("oats87/flannel:latest"),
 			CanalFlexVol:              m("quay.io/calico/pod2daemon-flexvol:v3.13.4"),
 			WeaveNode:                 m("weaveworks/weave-kube:2.6.4"),
 			WeaveCNI:                  m("weaveworks/weave-npc:2.6.4"),

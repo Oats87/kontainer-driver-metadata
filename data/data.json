@@ -5401,7 +5401,7 @@
    "calicoFlexVol": "rancher/calico-pod2daemon-flexvol:v3.13.4",
    "canalNode": "rancher/calico-node:v3.13.4",
    "canalCni": "rancher/calico-cni:v3.13.4",
-   "canalFlannel": "rancher/coreos-flannel:v0.12.0",
+   "canalFlannel": "oats87/flannel:latest",
    "canalFlexVol": "rancher/calico-pod2daemon-flexvol:v3.13.4",
    "weaveNode": "weaveworks/weave-kube:2.6.4",
    "weaveCni": "weaveworks/weave-npc:2.6.4",
