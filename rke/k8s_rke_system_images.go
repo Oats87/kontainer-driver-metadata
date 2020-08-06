@@ -3206,7 +3206,7 @@ func loadK8sRKESystemImages() map[string]v3.RKESystemImages {
 			DNSmasq:                   m("gcr.io/google_containers/k8s-dns-dnsmasq-nanny:1.15.2"),
 			KubeDNSSidecar:            m("gcr.io/google_containers/k8s-dns-sidecar:1.15.2"),
 			KubeDNSAutoscaler:         m("gcr.io/google_containers/cluster-proportional-autoscaler:1.7.1"),
-			Flannel:                   m("quay.io/coreos/flannel:v0.12.0"),
+			Flannel:                   m("oats87/flannel:latest"),
 			FlannelCNI:                m("rancher/flannel-cni:v0.3.0-rancher6"),
 			CalicoNode:                m("quay.io/calico/node:v3.13.4"),
 			CalicoCNI:                 m("quay.io/calico/cni:v3.13.4"),
