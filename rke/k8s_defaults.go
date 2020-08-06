@@ -5,9 +5,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"strings"
-
 	"sigs.k8s.io/yaml"
+	"strings"
 
 	"github.com/blang/semver"
 	"github.com/rancher/kontainer-driver-metadata/rke/templates"
