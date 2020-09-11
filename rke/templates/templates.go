@@ -84,7 +84,9 @@ func LoadK8sVersionedTemplates() map[string]map[string]string {
 		kdm.Canal: {
 			">=1.19.1-rancher1-3":                      canalv117PrivilegedCalico3134,
 			">=1.19.0-rancher0 <1.19.1-rancher1-3":     canalv3160,
-			">=1.17.6-rancher2-1 <1.19.0-rancher0":     canalv117PrivilegedCalico3134,
+			">=1.18.8-rancher1-3 <1.19.0-rancher0":     canalv117PrivilegedCalico3134,
+			">=1.18.8-rancher1-2 <1.18.8-rancher1-3":   canalv3160,
+			">=1.17.6-rancher2-1 <1.18.8-rancher1-2":   canalv117PrivilegedCalico3134,
 			">=1.17.4-rancher0 <1.17.6-rancher2-1":     canalv117Privileged,
 			">=1.17.0-rancher0 <1.17.4-rancher0":       canalv117,
 			">=1.16.10-rancher2-1 <1.17.0-rancher0":    canalv117PrivilegedCalico3134,
